@@ -30,5 +30,9 @@ dependencies {
     compile('org.flywaydb:flyway-core')
     compile('org.projectlombok:lombok')
     runtime('mysql:mysql-connector-java')
+    testCompile('com.github.database-rider:rider-spring:1.2.9') {
+        exclude group: 'org.slf4j', module: 'slf4j-simple'
+    }
+    testCompile('io.rest-assured:rest-assured:3.1.0')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
